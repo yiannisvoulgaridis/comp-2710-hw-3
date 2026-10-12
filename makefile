@@ -1,1 +1,3 @@
-g++ *.cpp && ./a.out 
+all:
+	g++ *.cpp -o myprogram
+	./myprogram
