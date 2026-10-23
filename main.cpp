@@ -15,6 +15,7 @@ using std::endl;
 using std::ifstream;
 using std::ofstream;
 using std::getline;
+using std::ws; // skips the whitespace
 
 int main()
 {
@@ -43,6 +44,22 @@ int main()
     return 1;
 }
 
+	int num_cards;
+	in_stream_cc >> num_cards; 
+	string name;
+	credit_card card;
+
+	// loop to read each credit card
+	for (int i = 0; i < num_cards; i++)
+{
+    getline(in_stream_cc >> std::ws, name); // reads cardholder name skipping whitespace from prev extraction
+
+    in_stream_cc >> card.cc_number; // reads card number
+    in_stream_cc >> card.limit; // reads limit
+    in_stream_cc >> card.current_balance; // reads balance
+}
+
+	
 	//add to store and other variables
 	
 
