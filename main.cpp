@@ -20,8 +20,11 @@ int main()
 {
 
 	//import from text files
+	ifstream in_stream_cc.open("credit_card.txt");
+	ifstream in_stream_prod.open("products.txt");
 
 	//add to store and other variables
+	
 
 	//print store info after you finish importing info
 	//from text files and add them to your store
