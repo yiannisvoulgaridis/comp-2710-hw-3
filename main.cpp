@@ -59,6 +59,43 @@ int main()
     in_stream_cc >> card.current_balance; // reads balance
 }
 
+	int num_people;
+	in_stream_ppl >> num_people;
+	
+	string name;
+	string phone;
+	string street;
+	string address_line2;
+	string city;
+	string state;
+	string zip;
+	
+	for (int i = 0; i < num_people; i++)
+	{
+	    getline(in_stream_ppl >> std::ws, name);
+	    getline(in_stream_ppl, phone);
+	    getline(in_stream_ppl, street);
+	    getline(in_stream_ppl, address_line2);
+	    getline(in_stream_ppl, city);
+	    getline(in_stream_ppl, state);
+	    getline(in_stream_ppl, zip);
+
+		auto it = cards.find(name);
+
+			if (it == cards.end())
+			{
+			    cout << "No credit card found for " << name << endl;
+			    return 1;
+			}
+			
+			credit_card card = it->second;
+	
+	    // Create address object
+	    // Find matching credit card
+	    // Create Person object
+	    // Add Person to Store
+	}
+
 	
 	//add to store and other variables
 	
