@@ -20,6 +20,12 @@ int main()
 {
 
 	//import from text files
+
+	ifstream in_stream_cc("credit_card.txt");
+	ifstream in_stream_prod("products.txt");
+	ifstream in_stream_ppl("people.txt");
+	
+		
 	if (!in_stream_cc.is_open())
 {
     cout << "Error opening credit_card.txt" << endl;
