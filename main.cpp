@@ -20,8 +20,22 @@ int main()
 {
 
 	//import from text files
-	ifstream in_stream_cc.open("credit_card.txt");
-	ifstream in_stream_prod.open("products.txt");
+	if (!in_stream_cc.is_open())
+{
+    cout << "Error opening credit_card.txt" << endl;
+    return 1;
+}
+	
+	if (!in_stream_prod.is_open())
+{
+    cout << "Error opening products.txt" << endl;
+    return 1;
+}
+	if (!in_stream_ppl.is_open())
+{
+    cout << "Error opening people.txt" << endl;
+    return 1;
+}
 
 	//add to store and other variables
 	
