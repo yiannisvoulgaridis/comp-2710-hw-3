@@ -89,6 +89,21 @@ int main()
 			}
 			
 			credit_card card = it->second;
+
+		address person_addr;
+		person_addr.address_line1 = street;
+		person_addr.address_line2 = address_line2;
+		person_addr.city = city;
+		person_addr.state = state;
+		person_addr.zip = zip;
+
+		auto it = cards.find(name);
+
+			if (it == cards.end())
+			{
+			    cout << "No credit card found for " << name << endl;
+			    return 1;
+			}
 	
 	    // Create address object
 	    // Find matching credit card
