@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdlib> 
+#include <iomanip>
 
 #include "address.h"
 #include "credit_card.h"
@@ -149,6 +150,7 @@ int main()
 
 	//make random number of random transactions
 	int num_random_transactions = rand() % 89 + 11;
+	cout << std::fixed << std::setprecision(2);
 
 	for (int i = 0; i < num_random_transactions; i++)
 	{
