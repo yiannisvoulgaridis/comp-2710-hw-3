@@ -32,7 +32,7 @@ std::string credit_card::credit_card_info()
 {
     std::stringstream ss;
 
-    ss << fixed << setprecision(2);
+    ss << std::fixed << std::setprecision(2);
     ss << "Credit card number: " << cc_number << "\n";
     ss << "Credit Card Limit: $" << limit << "\n";
     ss << "Current Balance: $" << current_balance;
