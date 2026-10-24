@@ -49,6 +49,16 @@ int main()
 	string name;
 	credit_card card;
 
+	const int MAX_SIZE = 100;
+
+	string card_names[MAX_SIZE];
+	credit_card cards[MAX_SIZE];
+	
+	Person people[MAX_SIZE];
+	product products[MAX_SIZE];
+	
+	Store store1;
+
 	// loop to read each credit card
 	for (int i = 0; i < num_cards; i++)
 {
