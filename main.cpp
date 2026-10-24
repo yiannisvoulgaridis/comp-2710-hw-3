@@ -148,7 +148,38 @@ int main()
 	cout << store1.store_info() << endl << endl;
 
 	//make random number of random transactions
+	int num_random_transactions = rand() % 89 + 11;
 
+	for (int i = 0; i < num_random_transactions; i++)
+	{
+	    int customer_index = rand() % store1.num_customers();
+	    int product_index = rand() % store1.num_products();
+	    int quantity = rand() % 5 + 1;
+
+		Person customer = store1.get_customer(customer_index);
+		product item = store1.get_product(product_index);
+
+		bool successful = store1.make_purchase(customer, item, quantity);
+
+		if (successful)
+		{
+		    cout << "Purchase successful!" << endl;
+		    cout << "Customer: " << customer.name() << endl;
+		    cout << "Product: " << item.name << endl;
+		    cout << "Quantity: " << quantity << endl;
+		    cout << "Total: $" << item.price * quantity << endl;
+		}
+		else
+		{
+		    cout << "Purchase unsuccessful!" << endl;
+		    cout << "Customer: " << customer.name() << endl;
+		    cout << "Product: " << item.name << endl;
+		    cout << "Quantity: " << quantity << endl;
+		    cout << "Total attempted: $" << item.price * quantity << endl;
+		}
+
+cout << endl;
+	}
 	//print store info at the end
 	cout << "Store info: " << endl << endl;
 	cout << store1.store_info() << endl << endl;
