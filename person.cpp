@@ -13,8 +13,8 @@ Person::Person(string name, string phone, address person_address, credit_card pe
 {
     name_ = name;
     phone_ = phone;
-    person_address = person_address;
-    person_credit_card = person_credit_card;
+    person_address_ = person_address;
+    person_credit_card_ = person_credit_card;
     
 } 
 // receives a name, number, address object, credit card object as params and assigns each to the 
