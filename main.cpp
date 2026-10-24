@@ -44,10 +44,18 @@ int main()
     return 1;
 }
 
+	const int MAX_SIZE = 100; // max array capacity
+
 	int num_cards; //stores number at beginning of credit_card.txt
 	in_stream_cc >> num_cards; //reads in that number from the file
 
-	const int MAX_SIZE = 100; // max array capacity
+	if (num_cards < 0 || num_cards > MAX_SIZE)
+{
+    cout << "Invalid number of credit cards." << endl;
+    return 1;
+}
+
+
 
 	string card_names[MAX_SIZE]; //names on cc
 	credit_card cards[MAX_SIZE]; //cc structs
@@ -70,6 +78,12 @@ int main()
 	// read in people from people.txt
 	int num_people;
 	in_stream_ppl >> num_people;
+
+	if (num_people < 0 || num_people > MAX_SIZE)
+{
+    cout << "Invalid number of people." << endl;
+    return 1;
+}
 	
 	string name;
 	string phone;
@@ -112,6 +126,12 @@ int main()
 		// read products from products.txt
 		int num_products; // holds num of prods
 		in_stream_prod >> num_products; 
+
+		if (num_products < 0 || num_products > MAX_SIZE)
+		{
+		    cout << "Invalid number of products." << endl;
+		    return 1;
+		}
 		
 		for (int i = 0; i < num_products; i++)
 		{
