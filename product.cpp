@@ -11,5 +11,7 @@ std::string product::product_info()
     product_nbr<< price;
 
     //retrun statement with combination of strings and format
-    return name + "\n" + description + "\n" + product_nbr.str();
+    return "Product Name: " + name
+     + "\nDescription: " + description
+     + "\nPrice: $" + product_nbr.str();
 }
