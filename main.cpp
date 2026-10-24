@@ -109,6 +109,19 @@ int main()
 		}
 	}
 
+		// read products from products.txt
+		int num_products; // holds num of prods
+		in_stream_prod >> num_products; 
+		
+		for (int i = 0; i < num_products; i++)
+		{
+		    getline(in_stream_prod >> ws, products[i].name);
+		    getline(in_stream_prod, products[i].description);
+		    in_stream_prod >> products[i].price;
+		
+		    store1.add_product(products[i]); //adds the completed product to the store's internal products array
+		}
+
 	//print store info after you finish importing info
 	//from text files and add them to your store
 	cout << "Store info: " << endl << endl;
